@@ -1,0 +1,10 @@
+# this yaml file assumes that the volume's fs have been created
+- name: Mount volumes
+  hosts: application
+  become: yes  # Run tasks as root
+
+  tasks:
+    - name: Install Python 3 and pip3
+      ansible.builtin.command:
+        cmd: sudo mount 10.0.0.0:/root/cse356-warmup2/static/media /root/cse356-warmup2/static/media
+

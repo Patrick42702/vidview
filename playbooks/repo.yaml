@@ -1,0 +1,10 @@
+- name: Deploy Flask Application Environment
+  hosts: all
+  become: yes  # Run tasks as root
+
+  tasks:
+    - name: Clone the repository
+      git:
+        repo: "https://{{ github_username }}:{{ github_pat }}@github.com/{{ github_username }}/{{ github_repo }}.git"
+        dest: /root/cse356-warmup2/
+        version: main

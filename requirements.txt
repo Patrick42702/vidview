@@ -1,0 +1,15 @@
+flask
+pymongo
+email-validator
+Flask-Mail
+flask-jwt-extended
+python-dotenv
+redis
+celery
+flower
+numpy
+requests
+beautifulsoup4
+netifaces
+gunicorn
+locust

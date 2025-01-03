@@ -1,0 +1,9 @@
+- name: Setup NFS on client instances
+  hosts: application, compute
+  become: yes  # Run tasks as root
+
+  tasks:
+    - name: make sure nfs software installed
+      apt:
+        name:
+          - nfs-common
